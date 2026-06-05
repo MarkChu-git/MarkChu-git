@@ -1,58 +1,51 @@
+<!--
+  Mark Chu — GitHub profile README
+  Design system: see DESIGN.md
+  Hero is a rasterized PNG (GitHub strips animated SVG). Every embed below is curl-verified HTTP 200.
+-->
+
 <div align="center">
   <a href="https://markchu-git.github.io">
-    <img src="banner.svg" alt="Mark Chu" width="100%" />
+    <img src="hero.png" alt="Mark Chu — CS · Finance · Product · Marketing" width="100%" />
   </a>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=13&duration=2500&pause=99999&color=D4A843&center=true&vCenter=true&repeat=false&width=600&height=28&lines=Building+deliberately." alt="" />
+  <a href="https://markchu-git.github.io">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1200&color=D4A843&center=true&vCenter=true&width=720&height=40&lines=Currently+building:+Always-Ontrack,+kestrel,+Aura;CS+%C2%B7+Finance+%C2%B7+Product+%C2%B7+Marketing;Compounding+small+gains,+daily." alt="Currently building Always-Ontrack, kestrel, Aura" />
+  </a>
 </div>
 
 <br/>
 
-<table width="100%">
-<tr>
-<td valign="top" width="52%">
-
-<img width="100%" src="https://github-readme-stats.vercel.app/api?username=MarkChu-git&show_icons=true&hide_border=true&title_color=D4A843&icon_color=D4A843&text_color=6B6760&bg_color=0A0908&count_private=true&include_all_commits=true&ring_color=D4A843" />
-
-<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarkChu-git&layout=compact&hide_border=true&title_color=D4A843&text_color=6B6760&bg_color=0A0908&langs_count=6&card_width=400" />
-
-</td>
-<td valign="top" width="48%">
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=ts,react,nextjs,vue,astro,nodejs,python,fastapi,go,postgres,supabase,docker,kubernetes,tailwind,linux,bash,java,kotlin,cpp,git,latex&perline=7&theme=dark" alt="Tech stack" />
+</div>
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=ts,react,nextjs,python,fastapi,go&theme=dark&perline=6" alt="Stack A" />
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=postgres,docker,supabase,kubernetes,linux,bash&theme=dark&perline=6" alt="Stack B" />
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=java,kotlin,cpp,git,latex,vscode&theme=dark&perline=6" alt="Stack C" />
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=MarkChu-git&bg_color=0A0908&color=34322E&line=D4A843&point=EEEBE3&area=true&area_color=1a1510&hide_border=true&custom_title=Contribution+Activity" alt="Activity" />
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MarkChu-git&bg_color=0A0908&color=EEEBE3&line=D4A843&point=EEEBE3&area=true&area_color=18140C&hide_border=true&title_color=D4A843&custom_title=Contribution%20Graph" alt="Contribution graph" width="100%" />
+</div>
 
 <br/>
 
 <div align="center">
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-markchu--git.github.io-D4A843?style=flat-square&labelColor=0A0908)](https://markchu-git.github.io)
-&nbsp;&nbsp;
-[![Blog](https://img.shields.io/badge/Writing-me.markchu.work-D4A843?style=flat-square&labelColor=0A0908)](https://me.markchu.work)
-&nbsp;&nbsp;
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-markchu-D4A843?style=flat-square&labelColor=0A0908)](https://www.linkedin.com/in/markchu)
-&nbsp;&nbsp;
-[![Email](https://img.shields.io/badge/Email-markchu2022-D4A843?style=flat-square&labelColor=0A0908)](mailto:markchu2022@gmail.com)
+  <a href="https://markchu-git.github.io"><img src="https://img.shields.io/badge/Portfolio-0A0908?style=for-the-badge&logo=githubpages&logoColor=D4A843" alt="Portfolio" /></a>
+  &nbsp;
+  <a href="https://me.markchu.work"><img src="https://img.shields.io/badge/Writing-0A0908?style=for-the-badge&logo=rss&logoColor=D4A843" alt="Blog" /></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/markchu"><img src="https://img.shields.io/badge/LinkedIn-0A0908?style=for-the-badge&logo=linkedin&logoColor=D4A843" alt="LinkedIn" /></a>
+  &nbsp;
+  <a href="mailto:markchu2022@gmail.com"><img src="https://img.shields.io/badge/Email-0A0908?style=for-the-badge&logo=gmail&logoColor=D4A843" alt="Email" /></a>
 
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=MarkChu-git&style=flat-square&color=D4A843&label=PROFILE+VIEWS" alt="Profile views" />
 </div>
