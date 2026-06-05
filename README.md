@@ -1,15 +1,12 @@
-<!-- markchu-git.github.io -->
-<div align="center">
+[![Mark Chu](banner.svg)](https://markchu-git.github.io)
 
-# MARK CHU
+<br>
 
-**CS · Finance · Product · Marketing**
+> CS · Finance · Product · Marketing — building at the intersection of all four.
 
-[![Portfolio](https://img.shields.io/badge/markchu--git.github.io-D4A843?style=flat-square&logoColor=0A0908&label=portfolio&labelColor=0A0908)](https://markchu-git.github.io)
-[![Blog](https://img.shields.io/badge/me.markchu.work-D4A843?style=flat-square&logoColor=0A0908&label=writing&labelColor=0A0908)](https://me.markchu.work)
-[![LinkedIn](https://img.shields.io/badge/in%2Fmarkchu-D4A843?style=flat-square&label=linkedin&labelColor=0A0908)](https://www.linkedin.com/in/markchu)
+**[→ markchu-git.github.io](https://markchu-git.github.io)**
 
-</div>
+<br>
 
 ---
 
@@ -21,10 +18,14 @@
 
 ---
 
-<div align="center">
+<br>
 
-`TypeScript` · `React` · `Next.js` · `Python` · `FastAPI` · `Go` · `PostgreSQL` · `Docker` · `Supabase`
+`TypeScript` &nbsp;`React` &nbsp;`Next.js` &nbsp;`Vue` &nbsp;`Astro` &nbsp;`Python` &nbsp;`FastAPI` &nbsp;`Node.js` &nbsp;`Go` &nbsp;`PostgreSQL`  
+`Supabase` &nbsp;`Docker` &nbsp;`Kubernetes` &nbsp;`Tailwind CSS` &nbsp;`Linux` &nbsp;`Bash` &nbsp;`Java` &nbsp;`Kotlin` &nbsp;`C++`
 
-*Building deliberately.*
+<br>
 
-</div>
+[![Portfolio](https://img.shields.io/badge/Portfolio-markchu--git.github.io-D4A843?style=flat-square&labelColor=0A0908)](https://markchu-git.github.io)
+[![Blog](https://img.shields.io/badge/Writing-me.markchu.work-D4A843?style=flat-square&labelColor=0A0908)](https://me.markchu.work)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-markchu-D4A843?style=flat-square&labelColor=0A0908)](https://www.linkedin.com/in/markchu)
+[![Email](https://img.shields.io/badge/Email-markchu2022%40gmail.com-D4A843?style=flat-square&labelColor=0A0908)](mailto:markchu2022@gmail.com)
