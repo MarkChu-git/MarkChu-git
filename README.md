@@ -26,7 +26,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MarkChu-git&bg_color=08080D&color=EAEAF2&line=56C7FF&point=7FD8FF&area=true&area_color=14163A&hide_border=true&title_color=9D8CFF&custom_title=Contribution%20Graph" alt="Contribution graph" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MarkChu-git&bg_color=00000000&color=8B93A8&line=56C7FF&point=7FD8FF&area=true&area_color=3A52FF&hide_border=true&hide_title=true&height=220" alt="Contribution graph" width="680" />
 </div>
 
 <br/>

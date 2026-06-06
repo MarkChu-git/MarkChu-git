@@ -39,7 +39,7 @@ GitHub's markdown sanitizer **strips `<style>`/`@keyframes` from committed SVGs*
 Earlier versions broke because `github-readme-stats` returns **503** and custom animated SVGs get stripped. Rule: **no asset ships unless `curl` confirms HTTP 200.** Verified-good services only:
 - `readme-typing-svg.demolab.com` — animated tagline (cyan)
 - `skillicons.dev` — stack icons (dark theme)
-- `github-readme-activity-graph.vercel.app` — contribution graph (electric recolor)
+- `github-readme-activity-graph.vercel.app` — contribution graph (transparent bg, compact 680px, mid-gray axis that reads on light **and** dark)
 - `img.shields.io` — link badges (CDN-backed)
 - `komarev.com/ghpvc` — view counter
 
