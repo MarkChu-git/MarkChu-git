@@ -1,46 +1,52 @@
 # Design System — Mark Chu Profile
 
-The README is a direct extension of the portfolio at **markchu-git.github.io**. Same language, same restraint. Editorial dark-tech, not a sticker wall.
+This README **is** the showcase. There is no separate portfolio site — the standalone github.io build was retired, and this repo replaces it. One screen, one strong idea: a developer's terminal, lit by electric chroma.
 
-**Dials** — VARIANCE 7 · MOTION 4 · DENSITY 2. Airy, confident, one strong idea (the rasterized editorial nameplate), motion only where it earns attention.
+**Dials** — VARIANCE 7 · MOTION 3 · DENSITY 3. One bold hero, calm supporting rows, motion only in the typed tagline.
 
 ## 1. Atmosphere
-A warm-charcoal editorial surface. The hero is a machined nameplate — massive grotesk name, a quiet principles column, a single live indicator. Everything else breathes underneath it. The feeling is a well-lit studio at night, not a neon arcade.
+Electric, nocturnal, precise. A dark terminal window floats on an iridescent blue-violet light-streak field — the look of long-exposure light through prism glass, heavy with film grain. The terminal is the calm, legible center; the chroma is the energy around it. Think "oil-slick on black," not "neon arcade." The feeling: a focused engineer at 2am, screen glowing.
 
 ## 2. Color Palette
 | Token | Hex | Role |
 |---|---|---|
-| Warm Charcoal | `#0A0908` | Primary background (never pure black) |
-| Surface | `#1A1814` | Elevated tint, ambient orb core |
-| Warm Off-White | `#EEEBE3` | Display type, primary text |
-| Muted Stone | `#6B6760` | Secondary text, captions |
-| Deep Stone | `#34322E` / `#5A564E` | Eyebrows, faint labels |
-| **Amber** | `#D4A843` | THE accent — numbers, links, logos, live url |
-| Live Green | `#00DC82` | Status dot ONLY (matches favicon) |
-| Hairline | `rgba(255,255,255,0.06)` | Dividers, frame lines |
+| Void | `#08080D` | Deepest background, activity-graph base (never pure black) |
+| Terminal Core | `#0C0C13` → `#08080D` | Card fill, vertical gradient |
+| Electric Blue | `#3A52FF` | THE primary accent — view counter, mid-streaks |
+| Sky Blue | `#5B8CFF` | Principle words, LinkedIn mark |
+| Cyan | `#56C7FF` / `#7FD8FF` | Prompt `$`, string values, streak cores, typed tagline |
+| Violet | `#7C3AED` / `#9D8CFF` | JSON keys, `$PHILOSOPHY`, graph title, deep streak shadows |
+| Off-White | `#E9E9F2` | Commands, primary text |
+| Bright White | `#FFFFFF` | The name `Mark Chu` only |
+| Muted Slate | `#565C70` / `#9098AC` | JSON punctuation, comments, captions |
+| Live Green | `#27C93F` | Terminal "go" dot only |
+| Hairline | `rgba(255,255,255,0.06–0.13)` | Card border, dividers, top highlight |
 
-One accent (amber), locked across every element. Green is reserved exclusively for the live dot.
+Iridescence is the brand: blue ↔ violet ↔ cyan, never a single flat accent. Each badge logo picks a different note of that spectrum (cyan / white / sky / violet) — a controlled rainbow, not sticker soup.
 
 ## 3. Typography
-- **Display:** Arial Black (rasterized) — heaviest available grotesk, stands in for the portfolio's `font-weight: 900`. Letter-spacing `-5` at display size.
-- **Mono / labels / body:** JetBrains Mono — the exact portfolio font, installed locally and baked into the PNG.
-- No serif. No emoji in headings. Hierarchy comes from weight + color, not raw scale.
+- **Everything is JetBrains Mono** — the portfolio's exact font, baked into the hero PNG/JPEG across its full weight range (Regular → Medium → ExtraBold). A monospace-only system reads as "engineer," and the column alignment in the `profile.json` block depends on it.
+- The name `Mark Chu` is JetBrains Mono **ExtraBold 46px** — the one moment of scale. Hierarchy comes from weight + color, not many sizes.
+- No serif. No emoji. No second font family.
 
-## 4. The Hero is a PNG (hard rule)
-GitHub's markdown sanitizer **strips `<style>` and `@keyframes` from committed SVGs**, so an animated SVG banner renders broken. The hero is therefore rasterized to PNG via `rsvg-convert` + ImageMagick (Arial Black + JetBrains Mono baked in, subtle soft-light film grain, quantized to ~240KB at 1600px). Bulletproof: a raster image never depends on a third-party service being up.
+## 4. The Hero is a rasterized JPEG (hard rule)
+GitHub's markdown sanitizer **strips `<style>`/`@keyframes` from committed SVGs**, so an animated SVG banner renders broken. The hero is therefore baked to a raster:
+- **Chroma**: ImageMagick random noise → 27° motion-blur → iridescent CLUT (navy→violet→blue→cyan) → spatial violet bias → coarse film grain → vignette.
+- **Terminal card**: SVG (JetBrains Mono, syntax-colored CLI session) rendered at 2× via `rsvg-convert`, downscaled for crisp text, composited with a soft drop shadow.
+- **Format**: JPEG q88 4:2:0 (~282 KB). Grain is incompressible, so PNG bloats to ~1.7 MB; JPEG at this quality keeps text crisp with no visible fringing. A raster never depends on a third-party service being up.
 
 ## 5. Reliability Rule (every embed is curl-verified 200)
-The previous version broke because `github-readme-stats` returns **503** and a custom animated SVG was stripped. Rule going forward: **no asset ships unless `curl` confirms HTTP 200.** Verified-good services only:
-- `readme-typing-svg.demolab.com` — animated tagline
-- `skillicons.dev` — stack icons
-- `github-readme-activity-graph.vercel.app` — contribution graph (amber-themed)
-- `img.shields.io` — link badges (CDN-backed, always up)
+Earlier versions broke because `github-readme-stats` returns **503** and custom animated SVGs get stripped. Rule: **no asset ships unless `curl` confirms HTTP 200.** Verified-good services only:
+- `readme-typing-svg.demolab.com` — animated tagline (cyan)
+- `skillicons.dev` — stack icons (dark theme)
+- `github-readme-activity-graph.vercel.app` — contribution graph (electric recolor)
+- `img.shields.io` — link badges (CDN-backed)
 - `komarev.com/ghpvc` — view counter
 
 Banned (verified failing): `github-readme-stats` (503), `streak-stats` (timeout), `github-profile-trophy` (402).
 
 ## 6. Motion
-One animated element only: the typing tagline, cycling real project names. Everything else is static and calm. Motion must be motivated — it names what he's currently building, it isn't decoration.
+One animated element: the typed tagline cycling real project names. Everything else is static and calm. Motion names what he's building — it is not decoration.
 
 ## 7. Anti-Patterns (banned)
-No pure black. No AI-purple. No emoji soup. No committed animated SVG. No unverified image services. No generic "Hi 👋 I'm X" header. No three-column trophy/stat wall. No fake-precise stats. The nameplate carries the page; supporting elements stay quiet.
+No pure black. No generic AI-purple gradient slop — the violet here is half of a deliberate blue↔cyan iridescence, executed with intent. No emoji. No committed animated SVG. No PNG hero (grain bloats it). No unverified image services. No "Hi 👋 I'm X" header. No trophy/stat wall. No fake-precise stats. No link to the dead portfolio site. The terminal carries the page; everything else stays quiet.
