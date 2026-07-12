@@ -23,10 +23,19 @@ jobs:
         with:
           node-version: 20
 
-      - name: Render SVGs
+      - name: Render waveform SVGs (alternate)
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/contribution-graph.mjs
+
+      - name: Render 3D contribution graph
+        uses: yoshi389111/github-profile-3d-contrib@v0.9.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Collect night-rainbow variant
+        run: cp profile-3d-contrib/profile-night-rainbow.svg out/contribution-3d.svg
 
       # Single-commit force-push to `output` keeps main history free of bot noise.
       - name: Publish to output branch

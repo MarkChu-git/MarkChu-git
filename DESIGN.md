@@ -44,12 +44,12 @@ Earlier versions broke because `github-readme-stats` returns **503** and custom 
 
 Banned (verified failing): `github-readme-stats` (503), `streak-stats` (timeout), `github-profile-trophy` (402), `github-readme-activity-graph` (plots only the trailing **31 days** — any quiet month renders as a dead flat zero-line; replaced by the first-party graph below).
 
-## 5b. Contribution Graph is First-Party (no service to break)
-The graph is rendered by us, from the source of truth:
-- `scripts/contribution-graph.mjs` (zero-dependency Node) pulls the trailing-12-month calendar from the **GitHub GraphQL API** and renders a weekly-total "electric signal" waveform — cyan line, indigo glow, blue→violet area fade — plus real stats (total / active days / best day / longest streak) and a `SYNCED <date>` stamp.
-- **Static SVG, presentation attributes only** — no `<style>`, so GitHub's SVG sanitizer has nothing to strip (§4). Dark + light variants ship separately; the README picks via `<picture prefers-color-scheme>`.
-- `.github/workflows/contribution-graph.yml` re-renders **daily at 02:23 UTC** (plus on script changes) and single-commit force-pushes to the `output` branch — main history stays clean, and the daily push keeps GitHub from auto-disabling the schedule.
-- README embeds `raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-{dark,light}.svg` — still curl-verified 200 like every other embed.
+## 5b. Contribution Graph is Self-Rendered (no service to break)
+Everything renders inside **our own** daily Action (`contribution-graph.yml`, 02:23 UTC + on script changes) and single-commit force-pushes to the `output` branch — main history stays clean, the daily push keeps GitHub from auto-disabling the schedule, and there is **no third-party server at serve time**.
+- **Primary visual: `yoshi389111/github-profile-3d-contrib@v0.9.3`, `night-rainbow` theme** — the year as a 3D isometric skyline whose blue→violet→cyan rainbow matches our iridescence palette. Published as `output/contribution-3d.svg`. It ships its own date-range stamp, so freshness is visible. Dark night-sky base on both GitHub themes — same theme-invariant rule as the hero JPEG.
+- Alternate (kept warm, swap back anytime): `scripts/contribution-graph.mjs` — zero-dependency first-party "electric signal" waveform (cyan line, indigo glow, real stats), attribute-only static SVG, dark+light variants at `output/contribution-graph-{dark,light}.svg`.
+- README embeds `raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-3d.svg` — still curl-verified 200 like every other embed.
+- Note on committed-SVG animation (§4 nuance): files served as *images* via raw/camo are **not** sanitized — snk/3d-contrib style CSS-in-SVG renders fine in `<img>`. The §4 strip rule applies to inline markup, so the hero stays a raster; embedded SVG files may keep their internal styling.
 
 ## 6. Motion
 One animated element: the typed tagline cycling real project names. Everything else is static and calm. Motion names what he's building — it is not decoration.
