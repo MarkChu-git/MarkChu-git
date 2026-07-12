@@ -1,0 +1,42 @@
+name: contribution-graph
+
+on:
+  schedule:
+    - cron: "23 2 * * *" # daily, 02:23 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/contribution-graph.mjs
+      - .github/workflows/contribution-graph.yml
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Render SVGs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/contribution-graph.mjs
+
+      # Single-commit force-push to `output` keeps main history free of bot noise.
+      - name: Publish to output branch
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          cd out
+          git init -q -b output
+          git config user.name "github-actions[bot]"
+          git config user.email "41898024+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "render: contribution graph ($(date -u +%F))"
+          git push -qf "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" output

@@ -10,7 +10,7 @@ Electric, nocturnal, precise. A dark terminal window floats on an iridescent blu
 ## 2. Color Palette
 | Token | Hex | Role |
 |---|---|---|
-| Void | `#08080D` | Deepest background, activity-graph base (never pure black) |
+| Void | `#08080D` | Deepest background (never pure black) |
 | Terminal Core | `#0C0C13` → `#08080D` | Card fill, vertical gradient |
 | Electric Blue | `#3A52FF` | THE primary accent — view counter, mid-streaks |
 | Sky Blue | `#5B8CFF` | Principle words, LinkedIn mark |
@@ -39,11 +39,17 @@ GitHub's markdown sanitizer **strips `<style>`/`@keyframes` from committed SVGs*
 Earlier versions broke because `github-readme-stats` returns **503** and custom animated SVGs get stripped. Rule: **no asset ships unless `curl` confirms HTTP 200.** Verified-good services only:
 - `readme-typing-svg.demolab.com` — animated tagline (cyan)
 - `skillicons.dev` — stack icons (dark theme)
-- `github-readme-activity-graph.vercel.app` — contribution graph (transparent bg, compact 680px, mid-gray axis that reads on light **and** dark)
 - `img.shields.io` — link badges (CDN-backed)
 - `komarev.com/ghpvc` — view counter
 
-Banned (verified failing): `github-readme-stats` (503), `streak-stats` (timeout), `github-profile-trophy` (402).
+Banned (verified failing): `github-readme-stats` (503), `streak-stats` (timeout), `github-profile-trophy` (402), `github-readme-activity-graph` (plots only the trailing **31 days** — any quiet month renders as a dead flat zero-line; replaced by the first-party graph below).
+
+## 5b. Contribution Graph is First-Party (no service to break)
+The graph is rendered by us, from the source of truth:
+- `scripts/contribution-graph.mjs` (zero-dependency Node) pulls the trailing-12-month calendar from the **GitHub GraphQL API** and renders a weekly-total "electric signal" waveform — cyan line, indigo glow, blue→violet area fade — plus real stats (total / active days / best day / longest streak) and a `SYNCED <date>` stamp.
+- **Static SVG, presentation attributes only** — no `<style>`, so GitHub's SVG sanitizer has nothing to strip (§4). Dark + light variants ship separately; the README picks via `<picture prefers-color-scheme>`.
+- `.github/workflows/contribution-graph.yml` re-renders **daily at 02:23 UTC** (plus on script changes) and single-commit force-pushes to the `output` branch — main history stays clean, and the daily push keeps GitHub from auto-disabling the schedule.
+- README embeds `raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-{dark,light}.svg` — still curl-verified 200 like every other embed.
 
 ## 6. Motion
 One animated element: the typed tagline cycling real project names. Everything else is static and calm. Motion names what he's building — it is not decoration.

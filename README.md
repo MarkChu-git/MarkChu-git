@@ -2,6 +2,8 @@
   Mark Chu — GitHub profile README
   Design system: see DESIGN.md
   Hero is a rasterized JPEG (GitHub strips animated SVG; grain kills PNG compression).
+  Contribution graph is first-party: scripts/contribution-graph.mjs renders it from the
+  GitHub GraphQL API; a daily Action force-pushes the SVGs to the `output` branch.
   Every embed below is curl-verified HTTP 200. No portfolio site link — the README IS the showcase.
 -->
 
@@ -26,7 +28,11 @@
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MarkChu-git&bg_color=00000000&color=8B93A8&line=56C7FF&point=7FD8FF&area=true&area_color=3A52FF&hide_border=true&hide_title=true&height=220" alt="Contribution graph" width="680" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-light.svg">
+    <img src="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-dark.svg" alt="Contribution graph — trailing 12 months" width="760" />
+  </picture>
 </div>
 
 <br/>
