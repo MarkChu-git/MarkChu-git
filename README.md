@@ -2,8 +2,10 @@
   Mark Chu — GitHub profile README
   Design system: see DESIGN.md
   Hero is a rasterized JPEG (GitHub strips animated SVG; grain kills PNG compression).
-  Contribution graph is first-party: scripts/contribution-graph.mjs renders it from the
-  GitHub GraphQL API; a daily Action force-pushes the SVGs to the `output` branch.
+  Contribution graph: github-profile-3d-contrib (night-rainbow), rendered daily inside
+  our own Action and force-pushed to the `output` branch — no third-party server at
+  serve time. The first-party waveform renderer (scripts/contribution-graph.mjs) still
+  ships alternate SVGs to the same branch.
   Every embed below is curl-verified HTTP 200. No portfolio site link — the README IS the showcase.
 -->
 
@@ -28,11 +30,7 @@
 <br/>
 
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-light.svg">
-    <img src="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-graph-dark.svg" alt="Contribution graph — trailing 12 months" width="760" />
-  </picture>
+  <img src="https://raw.githubusercontent.com/MarkChu-git/MarkChu-git/output/contribution-3d.svg" alt="3D contribution graph — trailing 12 months" width="100%" />
 </div>
 
 <br/>
@@ -43,7 +41,7 @@
   &nbsp;
   <a href="https://github.com/MarkChu-git"><img src="https://img.shields.io/badge/GitHub-0A0A0F?style=for-the-badge&logo=github&logoColor=EAEAF2" alt="GitHub" /></a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/markchu"><img src="https://img.shields.io/badge/LinkedIn-0A0A0F?style=for-the-badge&logo=linkedin&logoColor=5B8CFF" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/hanyang-chu-8836252a7"><img src="https://img.shields.io/badge/LinkedIn-0A0A0F?style=for-the-badge&logo=linkedin&logoColor=5B8CFF" alt="LinkedIn" /></a>
   &nbsp;
   <a href="mailto:markchu2022@gmail.com"><img src="https://img.shields.io/badge/Email-0A0A0F?style=for-the-badge&logo=gmail&logoColor=9D8CFF" alt="Email" /></a>
 
