@@ -28,18 +28,14 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/contribution-graph.mjs
 
-      - name: Render 3D contribution graph (electric theme)
+      - name: Render 3D contribution graph (stock theme)
         uses: yoshi389111/github-profile-3d-contrib@v0.9.3
         env:
           GITHUB_TOKEN: ${{ github.token }}
           USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: conf/github-profile-3d-contrib.json
 
-      # Language colors are hardcoded upstream — remap them onto the brand ramp.
-      - name: Recolor language pie
-        run: |
-          node scripts/recolor-graph-langs.mjs profile-3d-contrib/contribution-3d.svg
-          cp profile-3d-contrib/contribution-3d.svg out/contribution-3d.svg
+      - name: Collect default variant
+        run: cp profile-3d-contrib/profile-green-animate.svg out/contribution-3d.svg
 
       # Single-commit force-push to `output` keeps main history free of bot noise.
       - name: Publish to output branch
