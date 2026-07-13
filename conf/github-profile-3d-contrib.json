@@ -1,0 +1,10 @@
+{
+  "type": "normal",
+  "fileName": "contribution-3d.svg",
+  "backgroundColor": "#08080D",
+  "foregroundColor": "#E9E9F2",
+  "strongColor": "#56C7FF",
+  "weakColor": "#8B93A8",
+  "radarColor": "#9D8CFF",
+  "contribColors": ["#171C33", "#2B3B9E", "#3A52FF", "#5B8CFF", "#7FD8FF"]
+}
