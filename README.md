@@ -24,7 +24,7 @@
 <br/>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=ts,js,python,r,go,java,kotlin,html,react,nextjs,vue,vite,astro,tailwind,nodejs,bun,fastapi,postgres,supabase,pytorch,cloudflare,docker,kubernetes,linux,bash,git,latex,typst&perline=7&theme=dark" alt="Tech stack" />
+  <img src="https://skillicons.dev/icons?i=ts,js,python,r,go,java,kotlin,html,react,nextjs,vue,vite,astro,tailwind,nodejs,bun,fastapi,postgres,supabase,pytorch,anaconda,docker,kubernetes,cloudflare,linux,bash,git,latex&perline=7&theme=dark" alt="Tech stack" />
 </div>
 
 <br/>
